@@ -1,0 +1,42 @@
+a {
+  font-weight: bold;
+  color: rgb(26, 26, 26);
+  text-decoration: none;
+  background: white;
+}
+
+.thumbnail {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.title {
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.card {
+  /* background-color: dodgerblue; */
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 29, 29);
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}

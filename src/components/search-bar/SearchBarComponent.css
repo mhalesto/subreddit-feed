@@ -1,0 +1,21 @@
+.search-bar-wrapper {
+  flex: 1;
+  display:block
+  
+}
+
+.subreddit_input {
+  outline: 0;
+  border-width: 0 0 2px;
+  height: 30px;
+  font-size: 30px;
+  padding-top: 15px;
+  width: 100%;
+  border-radius: 0px 4px 4px 0px;
+}
+
+input.subreddit_input:focus {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(69, 123, 232);
+}

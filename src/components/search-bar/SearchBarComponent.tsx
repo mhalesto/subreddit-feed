@@ -1,3 +1,4 @@
+import './SearchBarComponent.css';
 
 interface ISearchBarComponentProps {
   searchTerm: string,
@@ -6,7 +7,7 @@ interface ISearchBarComponentProps {
 
 const SearchBarComponent = ({ searchTerm, onSearchChange } : ISearchBarComponentProps) => {
   return (
-    <div>
+    <div className='search-bar-wrapper'>
       <input className="subreddit_input" value={searchTerm} onChange={onSearchChange} />
     </div>
   )

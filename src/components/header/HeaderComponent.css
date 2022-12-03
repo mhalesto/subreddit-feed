@@ -1,8 +1,10 @@
 .header-component-wrapper {
-  flex: 1;
+  display: flexbox;
   height: 50px;
   padding: 10px;
   background-color: rgb(69, 123, 232);
+  width: 100%;
+  z-index: 999;
 }
 
 .app-header {
@@ -20,4 +22,10 @@
 
 .app-logo {
   height: 50px;
+}
+
+.children {
+  width: 100%;  
+  align-self: center; 
+  justify-self: center;
 }

@@ -29,33 +29,34 @@ function HomeComponent() {
     }
   }
 
-  const handleChange = (e: any) => {
-    setSortBy(e.target.value);
-  };
-
   return (
     <div className="home-component">
-      <HeaderComponent logo={logo} title={'Reddit'}>
-        <SortByComponent
-          sortBy={sortBy}
-          handleSortBy={(e: React.ChangeEvent<HTMLSelectElement>) => { setSortBy(e.target.value) }}
-        />
-      </HeaderComponent>
+      <div className="home-header-wrapper">
+        <HeaderComponent logo={logo} title={'Reddit'}>
+          <SortByComponent
+            sortBy={sortBy}
+            handleSortBy={(e: React.ChangeEvent<HTMLSelectElement>) => { setSortBy(e.target.value) }}
+          />
+        </HeaderComponent>
+      </div>
 
-      <SearchBarComponent
-        searchTerm={subreddit}
-        onSearchChange={(e: React.ChangeEvent<HTMLInputElement>) => { setSubreddit(e.target.value) }}
-      />
+      <div className="content-wrapper">
+        <div className="home-searchbar-wrapper">
+          <div className='subreddit-base-wrapper'>
+            <span className='subreddit-base'>/r/</span>
+          </div>
+          <SearchBarComponent
+            searchTerm={subreddit}
+            onSearchChange={(e: React.ChangeEvent<HTMLInputElement>) => { setSubreddit(e.target.value) }}
+          />
+        </div>
 
-      <RedditListContainer >
-        {
-          (posts) ? posts.map((post: any, index: number) => {
-            return (
-              <RedditListItem key={index} count={index} post={post.data} />
-            );
-          }) : `${errorMsg}`
-        }
-      </RedditListContainer>
+        <RedditListContainer>
+          {
+            <RedditListItem posts={posts} errorMsg={errorMsg} />
+          }
+        </RedditListContainer>
+      </div>
     </div>
   );
 }
