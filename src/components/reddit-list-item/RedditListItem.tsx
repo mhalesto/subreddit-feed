@@ -2,6 +2,7 @@
 import { Constants } from '../../constants/constants';
 import PostModel from '../../models/postModel';
 import './RedditListItem.css';
+import noImage from '../../assets/imgs/no-image-placeholder.jpg';
 
 function RedditListItem({ posts, errorMsg }: any) {
   console.log(posts);
@@ -9,11 +10,20 @@ function RedditListItem({ posts, errorMsg }: any) {
     <div className="cards">
       {
         (posts) ? posts.map((post: any) => {
-          const { title, thumbnail, subreddit, permalink, id }: PostModel = post && post.data
+          const { title, thumbnail, subreddit, permalink, id }: PostModel = post && post.data;
+          const thumbnailValidation = thumbnail?.slice(0, 8);
+
+          console.log(thumbnailValidation);
           return (
             <div className="card" key={id}>
               <div>
-                <img className='thumbnail' src={thumbnail} alt={`thumbail of ${title}`} />
+                {
+                  (thumbnailValidation === 'https://') ? (
+                    <img className='thumbnail' src={thumbnail} alt={`thumbail of ${title}`} />
+                  ) : (
+                    <img className='thumbnail' src={noImage} alt={`no thumbnail to display`} />
+                  )
+                }
               </div>
               <div className="title">
                 <a href={Constants.BASE_URL + permalink} target="_blank">
