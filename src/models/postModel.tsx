@@ -1,6 +1,6 @@
 export default interface PostModel {
   title: string, 
   thumbnail?: string, 
-  subredditName: string,
+  subreddit: string,
   permalink: string
 }

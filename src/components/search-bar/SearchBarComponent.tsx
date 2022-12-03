@@ -1,7 +1,7 @@
 
 interface ISearchBarComponentProps {
   searchTerm: string,
-  onSearchChange(searchText?: React.ChangeEvent<HTMLInputElement>): any
+  onSearchChange(searchText?: React.ChangeEvent<HTMLInputElement>): void
 }
 
 const SearchBarComponent = ({ searchTerm, onSearchChange } : ISearchBarComponentProps) => {

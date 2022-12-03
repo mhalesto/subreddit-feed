@@ -2,10 +2,11 @@ import './HeaderComponent.css';
 
 interface IHeaderComponentProps {
   title?: string,
-  logo: string
+  logo: string,
+  children?: any
 }
 
-function HeaderComponent({ title, logo }: IHeaderComponentProps) {
+function HeaderComponent({ title, logo, children }: IHeaderComponentProps) {
   return (
     <div className="header-component-wrapper" id="header-component" >
       <header className="app-header">
@@ -13,6 +14,9 @@ function HeaderComponent({ title, logo }: IHeaderComponentProps) {
         <span className='header-title'>
           { title }
         </span>
+        <div>
+          { children }
+        </div>
       </header>
     </div>
   );

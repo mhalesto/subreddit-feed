@@ -6,11 +6,19 @@ export default () => {
   const [posts, setPosts] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
 
-  const getPostsBySubReddit: any = async (subredditName?: string) => {
-    try {
-      const response = await reddit.get(`/r/${subredditName}.json`);
-      setPosts(response.data.data.children);
-    } catch( err: any) {
+  const getPostsBySubReddit: any = async (subredditName: string, sortBy?: string, postsLimit?: number) => {
+    if(subredditName) {
+      try {
+        const response = await reddit.get(`/r/${subredditName}/${sortBy}.json`, {
+          params: {
+            limit: postsLimit
+          }
+        });
+        setPosts(response.data.data.children);
+      } catch( err: any) {
+        setErrorMsg('Something went wrong');
+      }
+    } else {
       setErrorMsg('Something went wrong');
     }
   }
