@@ -8,16 +8,35 @@ body {
   background-color: #DAE0E6;
 }
 
+select {
+  font-family: 'FontAwesome', 'sans-serif';
+}
+
+.scrollbar {
+  overflow-y: scroll; /* Add the ability to scroll */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 .home-header-wrapper {
-  background-color: red;
   height: auto;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .home-searchbar-wrapper {

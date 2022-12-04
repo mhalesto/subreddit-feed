@@ -17,6 +17,9 @@ function RedditListItem({ posts, errorMsg }: any) {
           return (
             <div className="card" key={id}>
               <div>
+                <div className='subreddit-wrapper'>
+                  <span className='subreddit'>{subreddit}</span>
+                </div>
                 {
                   (thumbnailValidation === 'https://') ? (
                     <img className='thumbnail' src={thumbnail} alt={`thumbail of ${title}`} />
@@ -27,7 +30,7 @@ function RedditListItem({ posts, errorMsg }: any) {
               </div>
               <div className="title">
                 <a href={Constants.BASE_URL + permalink} target="_blank">
-                  <span> {title}</span>
+                  <span className='title-value'> {title}</span>
                 </a>
               </div>
             </div>

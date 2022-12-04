@@ -5,10 +5,27 @@ a {
   background: white;
 }
 
+.subreddit-wrapper {
+  position:absolute;
+  background-color: rgb(69, 123, 232);
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: -22px;
+  padding: 5px;
+  border-radius: 5px 0px 0px 0px;
+}
+
+.subreddit {
+  color: #fff;
+  font-weight: 500;
+}
+
 .thumbnail {
   height: 100%;
   width: 100%;
   border-radius: 5px 5px 0px 0px;
+  margin-top: -22px;
 }
 
 .title {
@@ -16,11 +33,15 @@ a {
   font-weight: 400;
 }
 
+.title-value {
+  font-family: 'Roboto', 'sans-serif';
+}
+
 .cards {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2.5rem 1rem;
 }
 
 .card {
