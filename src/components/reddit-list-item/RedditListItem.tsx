@@ -5,7 +5,6 @@ import './RedditListItem.css';
 import noImage from '../../assets/imgs/no-image-placeholder.jpg';
 
 function RedditListItem({ posts, errorMsg }: any) {
-  console.log(posts);
   return (
     <div className="cards">
       {
@@ -13,7 +12,6 @@ function RedditListItem({ posts, errorMsg }: any) {
           const { title, thumbnail, subreddit, permalink, id }: PostModel = post && post.data;
           const thumbnailValidation = thumbnail?.slice(0, 8);
 
-          console.log(thumbnailValidation);
           return (
             <div className="card" key={id}>
               <div>

@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import logo from '../../assets/imgs/reddit-logo.png';
 import HeaderComponent from '../../components/header/HeaderComponent';
+import LoaderComponent from '../../components/loader/LoaderComponent';
 import RedditListContainer from '../../components/reddit-list-container/RedditListContainer';
 import RedditListItem from '../../components/reddit-list-item/RedditListItem';
 import SearchBarComponent from '../../components/search-bar/SearchBarComponent';
@@ -11,12 +13,16 @@ function HomeComponent() {
   const [subreddit, setSubreddit] = useState('aww');
   const [postsLimit, setPostsLimit] = useState(25);
   const [sortBy, setSortBy] = useState('hot');
-  const [loading, setLoading] = useState(false);
+  const [lazyLoading, setLazyLading] = useState(false);
+  const [contetLoading, setContentLading] = useState(true);
   const [posts, getPostsBySubReddit, errorMsg] = useReddit();
 
   useEffect(() => {
     getPostsBySubReddit(subreddit, sortBy, postsLimit);
-  }, [subreddit, postsLimit, sortBy]);
+    if (posts && posts.length > 0) {
+      setContentLading(false);
+    }
+  }, [subreddit, postsLimit, sortBy, posts]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -25,6 +31,7 @@ function HomeComponent() {
 
   const handleScroll = async () => {
     if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight) {
+      setLazyLading(true);
       setPostsLimit((prev: number) => prev + 25)
     }
   }
@@ -51,11 +58,27 @@ function HomeComponent() {
           />
         </div>
 
-        <RedditListContainer>
+        {
+          (contetLoading) ? (
+            <div>
+              <LoaderComponent />
+            </div>
+          ) : (
+            <RedditListContainer>
+              {
+                <RedditListItem posts={posts} errorMsg={errorMsg} />
+              }
+            </RedditListContainer>
+          )
+        }
+
+        <div className='home-loader-wrapper'>
           {
-            <RedditListItem posts={posts} errorMsg={errorMsg} />
+            (lazyLoading && postsLimit <= 100) && (
+              <LoaderComponent />
+            )
           }
-        </RedditListContainer>
+        </div>
       </div>
     </div>
   );
