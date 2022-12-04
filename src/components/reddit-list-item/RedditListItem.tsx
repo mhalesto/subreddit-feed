@@ -30,7 +30,11 @@ function RedditListItem({ posts, errorMsg }: any) {
               </div>
               <div className="title">
                 <a href={Constants.BASE_URL + permalink} target="_blank">
-                  <span className='title-value'> {title}</span>
+                  <span className='title-value'>
+                    {
+                      (title && title.length > 60) ? `${title.slice(0, 60)}...` : title
+                    }
+                  </span>
                 </a>
               </div>
             </div>

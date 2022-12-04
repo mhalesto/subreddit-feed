@@ -13,7 +13,7 @@ a {
   justify-content: center;
   margin-top: -22px;
   padding: 5px;
-  border-radius: 5px 0px 0px 0px;
+  border-radius: 5px 0px 3px 0px;
 }
 
 .subreddit {
@@ -34,7 +34,7 @@ a {
 }
 
 .title-value {
-  font-family: 'Roboto', 'sans-serif';
+  font-family: 'Raileway', sans-serif;
 }
 
 .cards {

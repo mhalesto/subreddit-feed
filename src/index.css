@@ -51,6 +51,11 @@ code {
   padding: 0 12%;
 }
 
+/* Screen larger than 600px? 2 column */
+@media (max-width: 600px) {
+  .content-wrapper { padding: 5%; }
+}
+
 .display-inline-container {
   width: 100%;
   background-color: black;
