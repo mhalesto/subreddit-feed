@@ -1,15 +1,20 @@
 .header-component-wrapper {
-  display: flexbox;
+  display: flex;
+  /* flex: 1; */
   height: 50px;
   padding: 10px;
   background-color: rgb(69, 123, 232);
-  width: 100%;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .app-header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  /* max-width: 1200px; */
 }
 
 .header-title {

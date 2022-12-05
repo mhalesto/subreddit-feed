@@ -25,7 +25,7 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 20em;
+  width: 15em;
   height: 3em;
   border-radius: .25em;
   overflow: hidden;
