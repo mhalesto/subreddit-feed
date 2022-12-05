@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/subreddit-feed/static/css/main.eb295d23.css",
+    "main.css": "/subreddit-feed/static/css/main.291fb234.css",
     "main.js": "/subreddit-feed/static/js/main.5d70c454.js",
     "static/media/reddit-logo.png": "/subreddit-feed/static/media/reddit-logo.b31490f4d2c259eabebd.png",
     "static/media/loader.gif": "/subreddit-feed/static/media/loader.b1c1f800b38c2fb953c5.gif",
     "static/media/no-image-placeholder.jpg": "/subreddit-feed/static/media/no-image-placeholder.e83e00e04a871eaf1317.jpg",
     "index.html": "/subreddit-feed/index.html",
-    "main.eb295d23.css.map": "/subreddit-feed/static/css/main.eb295d23.css.map",
+    "main.291fb234.css.map": "/subreddit-feed/static/css/main.291fb234.css.map",
     "main.5d70c454.js.map": "/subreddit-feed/static/js/main.5d70c454.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb295d23.css",
+    "static/css/main.291fb234.css",
     "static/js/main.5d70c454.js"
   ]
 }
