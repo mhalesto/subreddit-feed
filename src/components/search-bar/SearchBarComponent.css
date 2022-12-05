@@ -1,7 +1,8 @@
 .search-bar-wrapper {
   flex: 1;
   display:flex;
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  width: auto;
 }
 
 .subreddit_input {
