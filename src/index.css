@@ -5,9 +5,67 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #DAE0E6;
+}
+
+select {
+  font-family: 'FontAwesome', 'sans-serif';
+}
+
+.scrollbar {
+  overflow-y: scroll; /* Add the ability to scroll */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.home-header-wrapper {
+  height: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.home-searchbar-wrapper {
+  padding-top: 100px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  width: 100%;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 0 12%;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (max-width: 600px) {
+  .content-wrapper { padding: 5%; }
+}
+
+.display-inline-container {
+  width: 100%;
+  background-color: black;
+}
+
+.subreddit-base {
+  font-size: 34.5px;
+  background-color: #DAE0E6;
+  border-style: solid;
+  border-color: rgb(118, 118, 118);
+  border-width: 2px 1.5px 2px 2px;
+  border-radius: 5px 0px 0px 5px;
 }

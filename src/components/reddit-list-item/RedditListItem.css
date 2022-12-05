@@ -1,0 +1,100 @@
+a {
+  font-weight: bold;
+  color: rgb(62, 53, 53);
+  text-decoration: none;
+}
+
+.subreddit-wrapper {
+  position:absolute;
+  background-color: rgb(69, 123, 232);
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: -22px;
+  padding: 5px;
+  border-radius: 5px 0px 3px 0px;
+}
+
+.subreddit {
+  color: #fff;
+  font-weight: 500;
+}
+
+.thumbnail {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  margin-top: -22px;
+}
+
+.title {
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.title-value {
+  font-family: 'Raileway', sans-serif;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 2.5rem 1rem;
+}
+
+/* .card {
+  background-color: dodgerblue;
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 29, 29);
+  height: auto;
+  border-radius: 4px;
+} */
+
+.card {
+  display: block;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid #f2f8f9;
+
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 29, 29);
+  height: auto;
+  border-radius: 4px;
+}
+.card:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #ccc;
+  background-color: rgb(98, 171, 244);
+}
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  transition: transform 0.15s ease-out;
+}
+.card:hover:before {
+  transform: scale(2.15);
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
