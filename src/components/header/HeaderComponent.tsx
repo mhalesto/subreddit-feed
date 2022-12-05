@@ -9,7 +9,7 @@ interface IHeaderComponentProps {
 function HeaderComponent({ title, logo, children }: IHeaderComponentProps) {
   return (
     <div className="header-component-wrapper" data-testid="header-component-wrapper">
-      <header className="app-header">
+      <div className="app-header">
         <img src={logo} className="app-logo" alt="logo" />
         <span className='header-title'>
           { title }
@@ -17,7 +17,7 @@ function HeaderComponent({ title, logo, children }: IHeaderComponentProps) {
         <div className='children'>
           { children }
         </div>
-      </header>
+      </div>
     </div>
   );
 }
