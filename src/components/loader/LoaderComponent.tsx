@@ -3,8 +3,8 @@ import './LoaderComponent.css';
 
 const LoaderComponent = () => {
   return(
-    <div className="loader-wrapper">
-      <img src={loaderImg} className="loader-img" alt='loader'/>
+    <div className="loader-wrapper" data-testid="loader-wrapper">
+      <img src={loaderImg} className="loader-img" alt='loader-img'/>
     </div>
   );
 }
