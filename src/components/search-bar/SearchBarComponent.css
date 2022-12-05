@@ -9,7 +9,7 @@
   border-width: 0 0 2px;
   height: 30px;
   font-size: 30px;
-  padding-top: 15px;
+  /* padding-top: 15px; */
   width: 100%;
   border-radius: 0px 4px 4px 0px;
 }
@@ -19,3 +19,15 @@ input.subreddit_input:focus {
   border-width: 0 0 2px;
   border-color: rgb(69, 123, 232);
 }
+
+input {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="30"><text x="5" y="26" style="font: bold 29px Arial;">/r/</text></svg>') no-repeat;
+  border: 1px solid #555;
+  box-sizing: border-box;
+  font: 16px "Arial";
+  height: 30px;
+  padding-left: 50px;
+  width: 300px;
+}
+
+/* rgb(#ff4400) */
