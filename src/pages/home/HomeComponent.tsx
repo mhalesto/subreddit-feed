@@ -50,7 +50,7 @@ function HomeComponent() {
       <div className="content-wrapper">
         <div className="home-searchbar-wrapper">
           <div className='subreddit-base-wrapper'>
-            <span className='subreddit-base'>/r/</span>
+            {/* <span className='subreddit-base'>/r/</span> */}
           </div>
           <SearchBarComponent
             searchTerm={subreddit}
