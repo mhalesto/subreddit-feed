@@ -8,11 +8,11 @@
   outline: 0;
   border-width: 0 0 2px;
   height: auto;
-  font-size: 45px;
+  font-size: 35px;
   width: 100%;
   /* border-radius: 0px 4px 4px 0px; */
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 15px;
+  padding-top: 22px;
   font-weight: 500;
 }
 
@@ -24,6 +24,6 @@ input.subreddit_input:focus {
 
 input {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="70"><text x="5" y="57" style="font: bold 43px Arial;">/r/</text></svg>') no-repeat;
-  padding-left: 45px;
+  padding-left: 46px;
   text-transform: lowercase;
 }
