@@ -37,7 +37,7 @@ function HomeComponent() {
   }
 
   return (
-    <div className="home-component">
+    <div className="home-component" data-testid="home-component">
       <div className="home-header-wrapper">
         <HeaderComponent logo={logo} title={'Reddit'}>
           <SortByComponent
