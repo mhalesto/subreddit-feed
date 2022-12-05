@@ -1,17 +1,18 @@
 .search-bar-wrapper {
   flex: 1;
-  display:block
-  
+  display:flex;
 }
 
 .subreddit_input {
   outline: 0;
   border-width: 0 0 2px;
-  height: 30px;
-  font-size: 30px;
-  /* padding-top: 15px; */
+  height: auto;
+  font-size: 45px;
   width: 100%;
-  border-radius: 0px 4px 4px 0px;
+  /* border-radius: 0px 4px 4px 0px; */
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 35px;
+  font-weight: 500;
 }
 
 input.subreddit_input:focus {
@@ -21,13 +22,7 @@ input.subreddit_input:focus {
 }
 
 input {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="30"><text x="5" y="26" style="font: bold 29px Arial;">/r/</text></svg>') no-repeat;
-  border: 1px solid #555;
-  box-sizing: border-box;
-  font: 16px "Arial";
-  height: 30px;
-  padding-left: 50px;
-  width: 300px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="70"><text x="5" y="67" style="font: bold 43px Arial;">/r/</text></svg>') no-repeat;
+  padding-left: 45px;
+  text-transform: lowercase;
 }
-
-/* rgb(#ff4400) */
